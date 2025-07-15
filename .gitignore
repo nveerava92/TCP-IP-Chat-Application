@@ -31,5 +31,11 @@
 *.out
 *.app
 
+# Pagackaged Files
+*.tar
+
+#VS Code config files
+pa1/.vscode/*
+
 # Build File
 pa1/assignment1

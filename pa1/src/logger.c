@@ -65,7 +65,7 @@ void cse4589_init_log(char* port)
 	/*Clean up*/
 	free(exec_dir);
 	free(hostname);
-	fclose(fp);
+	pclose(fp);
 }
 
 /**

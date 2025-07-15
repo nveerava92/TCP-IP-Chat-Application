@@ -8,7 +8,9 @@ OBJ_PATH  = $(patsubst $(SRC_DIR)/%,$(OBJ_DIR)/%,$(OBJ_FILES))
 
 LIBS	= 
 CC	= gcc
-CFLAGS	= -g -I$(INC_DIR) -std=c11
+CFLAGS	= -Wall -Wextra -Werror -g -I$(INC_DIR) -std=c11
+
+.PHONY: all clean test
 
 all: assignment1
 
@@ -17,6 +19,8 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 assignment1: $(OBJ_PATH)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+test:
 
 clean:
 	rm -f $(OBJ_DIR)/*.o $(INC_DIR)/*~ assignment1 ./logs/*
