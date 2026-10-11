@@ -42,3 +42,7 @@ pa1/src/.clangd
 
 # Build File
 pa1/assignment1
+
+# Assignment packaging and grader files
+/assignment_package.sh
+/grader/
